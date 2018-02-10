@@ -19,11 +19,10 @@ class Menu extends React.Component {
 	render(){
 		return(
 			<div>
-				<div class="question">How many Runner ?
+				<div className="question">How many Runner ?
 					<DropdownButton 
 						id="dropdown-selectnum" 
 						title={this.state.dropdownTitle} 
-						bsStyle="primary"
 						onSelect={this.props.onChangePeople}> 
 						{ SelectNum.map((num, i) => 
 							<MenuItem key={i} eventKey={i+1} onSelect={this.changeTitle}> {num} </MenuItem> 

@@ -26,7 +26,7 @@ class Marathon extends React.Component {
 			this.setState( { numPeople: this.state.numPeople - 1 } )	
 	}
 	handlePeopleChange(num){
-		this.setState( {numPeople: num} )
+		this.setState( { numPeople: num } )
 	}
 
 	render(){
@@ -34,8 +34,10 @@ class Marathon extends React.Component {
 			<div>
 				<h1>5000m</h1>
 				<Menu onChangePeople={ this.handlePeopleChange }/>
+				{/*
 				<Button bsSize='large' onClick={ this.addPerson }> Add </Button>
 				<Button bsSize='large' onClick={ this.minusPerson }> Minus </Button>
+				*/}
 				<People numPeople={this.state.numPeople} />
 				<Stopwatch />
 			</div>
