@@ -13,7 +13,7 @@ class Home extends React.Component {
 			<div>
 				<h1>Home Page</h1>
 				<h3>
-					<Link to="/marathon" > Marathon </Link>
+					<Link to={`${process.env.PUBLIC_URL}/marathon`} > Marathon </Link>
 				</h3>
 			</div>
 		)
@@ -26,8 +26,8 @@ const App = () => (
 	<BrowserRouter>
 		<div>
 			<Switch>
-				<Route exact path='/' component={ Home } />
-				<Route path='/marathon' component={ Marathon } />
+				<Route exact path={`${process.env.PUBLIC_URL}/search`} component={ Home } />
+				<Route ={`${process.env.PUBLIC_URL}/marathon`} component={ Marathon } />
 				<Route component={ NotFound } />
 			</Switch>
 		</div>
