@@ -26,7 +26,7 @@ const App = () => (
 	<BrowserRouter>
 		<div>
 			<Switch>
-				<Route exact path={`${process.env.PUBLIC_URL}/search`} component={ Home } />
+				<Route exact path={`${process.env.PUBLIC_URL}/`} component={ Home } />
 				<Route ={`${process.env.PUBLIC_URL}/marathon`} component={ Marathon } />
 				<Route component={ NotFound } />
 			</Switch>
