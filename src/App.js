@@ -27,7 +27,7 @@ const App = () => (
 		<div>
 			<Switch>
 				<Route exact path={`${process.env.PUBLIC_URL}/`} component={ Home } />
-				<Route ={`${process.env.PUBLIC_URL}/marathon`} component={ Marathon } />
+				<Route path={`${process.env.PUBLIC_URL}/marathon`} component={ Marathon } />
 				<Route component={ NotFound } />
 			</Switch>
 		</div>
