@@ -15,5 +15,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage" : "http://people.cs.nctu.edu.tw/~chunghy94378/"
+  "homepage": "http://people.cs.nctu.edu.tw/~chunghy94378/"
 }
