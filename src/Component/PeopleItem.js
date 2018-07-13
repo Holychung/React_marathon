@@ -25,19 +25,26 @@ class PeopleItem extends React.Component {
     return(
       <div className="container-fluid">
         <div className="row">
-          <h1 className="col-2">{ this.props.number }</h1>
-          <Button bsStyle="success" onClick={ this.incrementCount } > ＋ </Button>
-          {((this.state.counter) === 1) ?  
-            <div className="last-run"> Run: { this.state.counter } </div> 
-            : (this.state.counter === 0) ?
-              <div className="finish-run">
-                Finish
-                { () => this.props.onChangeRanking(this.props.key) }
-              </div>
-            : <div className="col-1"> Run: { this.state.counter } </div> 
+          <h1 className="flag col-2">{ this.props.number }</h1>
+
+          {(this.state.counter === 0) ?
+            <button type="button" className="btn btn-danger" disabled> - </button>
+            : <button type="button" className="btn btn-danger" onClick={ this.decrementCount } > － </button>
           }
-          <Button bsStyle="danger" onClick={ this.decrementCount } > － </Button>
+          {((this.state.counter) === 1) ?  
+            <div className="last-run col-5 custom-text"> CountDown: { this.state.counter } </div> 
+            : (this.state.counter === 0) ?
+              <div className="finish-run col-5 custom-text">
+                Finish
+              </div>
+            : <div className="col-5 custom-text"> CountDown: { this.state.counter } </div> 
+          }
+          {(this.state.counter === 0) ?
+            <button type="button" className="btn btn-success" disabled > ＋ </button>
+            : <button type="button" className="btn btn-success" onClick={ this.incrementCount } > ＋ </button>
+          }
         </div>
+        <hr />
       </div>
     )
   }
